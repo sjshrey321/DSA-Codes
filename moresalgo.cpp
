@@ -1,0 +1,32 @@
+
+
+/* 
+well basically what this algo is that if the element we assume to be majority element 
+in a array of numbers must be more or equal then the rest of the numbers .
+assumption is that there is majority element in the array . 
+*/
+int MooreAlgo( int *a, int n)
+{
+    int maj= a[0]; 
+    int count=1 ;
+    for (int i=1; i<n; i++)
+    {
+        if (a[i]== maj)
+        {
+            count ++; 
+        }
+        else 
+        {
+            count --;
+            if (count==0)
+            {
+                count=1;            
+                maj = a[i];
+            }  
+            else count--;
+
+        }
+    }
+    return maj;
+    
+}
