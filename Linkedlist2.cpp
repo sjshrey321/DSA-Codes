@@ -149,14 +149,16 @@ node* Mergetwolist(node* head1, node*head2)
         if ( head1->data < head2->data)
         {
             temp->next= head1; 
-            head1= head1->next; 
             temp = head1; 
+            head1= head1->next; 
+
         }
         else 
         {
             temp->next= head2;
-            head2 = head2->next; 
             temp = head2;  
+            head2 = head2->next; 
+           
         }
     }
 
